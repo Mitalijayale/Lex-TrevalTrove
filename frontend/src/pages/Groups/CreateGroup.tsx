@@ -353,7 +353,7 @@ import { createGroup } from "../../api/group.api";
 import Layout from "../../components/common/Layout";
 
 // ✅ Import local avif image
-import publicGroupsBg from "../../assets/PublicGroups.avif";
+import allgroupss from "../../assets/allgroupss.avif";
 
 const CreateGroup: React.FC = () => {
   const [name, setName] = useState("");
@@ -385,7 +385,7 @@ const CreateGroup: React.FC = () => {
       <div
         className="min-h-screen relative bg-cover bg-center flex items-center justify-center px-4"
         style={{
-          backgroundImage: `url(${publicGroupsBg})`,
+          backgroundImage: `url(${allgroupss})`,
         }}
       >
         {/* Overlay */}

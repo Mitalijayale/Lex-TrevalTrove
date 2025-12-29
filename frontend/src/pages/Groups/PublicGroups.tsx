@@ -186,7 +186,7 @@ import React, { useEffect, useState } from "react";
 import { getPublicGroups } from "../../api/group.api";
 import { IGroup } from "../../types/group";
 import GroupCard from "./GroupCard";
-import publicGroupsBg from "../../assets/PublicGroups.avif";
+import publicGroupsBg from "../../assets/people.avif";
 
 const PublicGroups: React.FC = () => {
   const [groups, setGroups] = useState<IGroup[]>([]);

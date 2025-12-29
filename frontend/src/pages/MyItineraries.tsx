@@ -393,7 +393,7 @@ import Layout from "../components/common/Layout";
 import { getMyItineraries, deleteItinerary } from "../api/itinerary.api";
 import { TripItinerary } from "../types/itinerary";
 import { useNavigate } from "react-router-dom";
-import MyIternariesImg from "../assets/MyIternaries.jpg"; // import the local JPG
+import MyIternariesImg from "../assets/Myiternaries.jpg"; // import the local JPG
 
 const MyItineraries = () => {
   const [data, setData] = useState<TripItinerary[]>([]);
@@ -432,7 +432,7 @@ const MyItineraries = () => {
         }}
       >
         {/* Overlay */}
-        <div className="min-h-screen bg-black/60 backdrop-blur-sm px-6 py-12">
+        <div className="min-h-screen bg-black/40 backdrop-blur-sm px-6 py-12">
           {/* Header */}
           <div className="max-w-6xl mx-auto flex items-center justify-between mb-12 text-white">
             <div>

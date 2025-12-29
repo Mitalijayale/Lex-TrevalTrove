@@ -90,13 +90,9 @@
 // };
 
 // export default GroupCard;
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { IGroup } from "../../types/group";
-
-// ✅ Import local JPG image
-import groupCardBg from "../../assets/GroupCard.jpg";
 
 interface GroupCardProps {
   group: IGroup;
@@ -112,26 +108,17 @@ const GroupCard: React.FC<GroupCardProps> = ({ group }) => {
         shadow-xl
         transition-all duration-300
         hover:-translate-y-1
+        bg-white
       "
-      style={{
-        backgroundImage: `url(${groupCardBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/45"></div>
-
-      {/* Glass overlay */}
-      <div className="absolute inset-0 bg-white/10"></div>
-
-      {/* Content */}
-      <div className="relative z-10 p-6 text-white">
+      {/* CONTENT */}
+      <div className="p-6 text-black">
+        
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
-          <div className="w-12 h-12 bg-white/30 rounded-xl flex items-center justify-center">
+          <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -145,19 +132,19 @@ const GroupCard: React.FC<GroupCardProps> = ({ group }) => {
             </svg>
           </div>
 
-          <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/30">
+          <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
             {group.members.length} member
             {group.members.length !== 1 ? "s" : ""}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold mb-2 line-clamp-1">
+        <h3 className="text-lg font-semibold mb-2 line-clamp-1 text-black">
           {group.name}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-white/85 mb-5 line-clamp-2 leading-relaxed">
+        <p className="text-sm text-gray-600 mb-5 line-clamp-2 leading-relaxed">
           {group.description}
         </p>
 
@@ -169,11 +156,12 @@ const GroupCard: React.FC<GroupCardProps> = ({ group }) => {
               w-full
               py-2.5
               rounded-full
-              bg-black/70
-              hover:bg-black/80
+              bg-gray-900
+              hover:bg-black
               transition
               text-sm
               font-medium
+              text-white
             "
           >
             View Group

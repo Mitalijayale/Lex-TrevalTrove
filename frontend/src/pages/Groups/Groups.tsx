@@ -88,7 +88,7 @@ import PublicGroups from "./PublicGroups";
 import AllGroups from "./AllGroups";
 
 // ✅ Import local AVIF background image
-import groupsBg from "../../assets/Groups.avif";
+import groupsBg from "../../assets/allgroupss.avif";
 
 const Groups: React.FC = () => {
   const [activeTab, setActiveTab] = useState("all-groups");
